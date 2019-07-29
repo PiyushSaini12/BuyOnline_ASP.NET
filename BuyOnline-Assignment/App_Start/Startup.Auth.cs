@@ -54,9 +54,9 @@ namespace BuyOnline_Assignment
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "496024231151239",
+               appSecret: "07435e833a1589dbe765183f983faac0");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

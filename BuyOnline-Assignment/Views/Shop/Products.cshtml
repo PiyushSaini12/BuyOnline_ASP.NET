@@ -68,7 +68,6 @@
             </td>
         </tr>
     }
-
 </table>
 
 @Html.PagedListPager((IPagedList)ViewBag.OnePageOfProducts, page => Url.Action("Products", new { page, catId = ViewBag.SelectedCat }))
@@ -78,11 +77,9 @@
     <script>
 
 $(function () {
-
     /*
     * Select products from specified category
     */
-
     $("#SelectCategory").on("change", function () {
         var url = $(this).val();
 

@@ -29,5 +29,11 @@ namespace BuyOnline_Assignment.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<BuyOnline_Assignment.Models.Data.ProductDTO> ProductDTOes { get; set; }
+
+        public System.Data.Entity.DbSet<BuyOnline_Assignment.Models.Data.CategoryDTO> CategoryDTOes { get; set; }
+
+        public System.Data.Entity.DbSet<BuyOnline_Assignment.Models.ViewModels.Pages.PageVM> PageVMs { get; set; }
     }
 }
