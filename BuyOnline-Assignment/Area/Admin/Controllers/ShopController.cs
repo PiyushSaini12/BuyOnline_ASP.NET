@@ -33,6 +33,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
             return View(categoryVMList);
         }
         // POST: Admin/Shop/AddNewCategory
+        [Authorize]
         [HttpPost]
         public string AddNewCategory(string catName)
         {
@@ -66,6 +67,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
         }
 
         // POST: Admin/Shop/ReorderCategories
+        [Authorize]
         [HttpPost]
         public void ReorderCategories(int[] id)
         {
@@ -92,6 +94,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
         }
 
         // GET: Admin/Shop/DeleteCategory/id
+        [Authorize]
         public ActionResult DeleteCategory(int id)
         {
             using (DefaultConnection db = new DefaultConnection())
@@ -111,6 +114,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
         }
 
         // POST: Admin/Shop/RenameCategory
+        [Authorize]
         [HttpPost]
         public string RenameCategory(string newCatName, int id)
         {
@@ -136,6 +140,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
         }
 
         // GET: Admin/Shop/AddProduct
+        [Authorize]
         [HttpGet]
         public ActionResult AddProduct()
         {
@@ -154,6 +159,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
 
         // POST: Admin/Shop/AddProduct
         [HttpPost]
+        [Authorize]
         public ActionResult AddProduct(ProductVM model, HttpPostedFileBase file)
         {
             // Check model state
@@ -317,6 +323,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
 
         // GET: Admin/Shop/EditProduct/id
         [HttpGet]
+        [Authorize]
         public ActionResult EditProduct(int id)
         {
             // Declare productVM
@@ -350,6 +357,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
 
         // POST: Admin/Shop/EditProduct/id
         [HttpPost]
+        [Authorize]
         public ActionResult EditProduct(ProductVM model, HttpPostedFileBase file)
         {
             // Get product id
@@ -472,6 +480,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
         }
 
         // GET: Admin/Shop/DeleteProduct/id
+        [Authorize]
         public ActionResult DeleteProduct(int id)
         {
             // Delete product from DB

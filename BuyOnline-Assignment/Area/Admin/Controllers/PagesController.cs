@@ -11,6 +11,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
     public class PagesController : Controller
     {
         // GET: Pages
+        [Authorize]
         public ActionResult Index()
         {
             List<PageVM> pagesList;
@@ -22,6 +23,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
         }
             
             // GET: Admin/Pages/AddPage
+            [Authorize]
             [HttpGet]
             public ActionResult AddPage()                                                                               
             {
@@ -81,9 +83,10 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
             // Redirect
             return RedirectToAction("AddPage");
         }
-       
-        
+
+
         // GET: Admin/Pages/EditPage/id
+        [Authorize]
         [HttpGet]
         public ActionResult EditPage(int id)
         {
@@ -107,7 +110,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
             // Return view with model
             return View(model);
         }
-
+        [Authorize]
         [HttpPost]
         public ActionResult EditPage(PageVM model)
         {
@@ -167,7 +170,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
             // Redirect
             return RedirectToAction("EditPage");
         }
-
+        [Authorize]
         // GET: Admin/Pages/PageDetails/id
         public ActionResult PageDetails(int id)
         {
@@ -192,7 +195,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
             // Return view with model
             return View(model);
         }
-
+        [Authorize]
         // GET: Admin/Pages/DeletePage/id
         public ActionResult DeletePage(int id)
         {
@@ -213,6 +216,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
         }
 
         // POST: Admin/Pages/ReorderPages
+        [Authorize]
         [HttpPost]
         public void ReorderPages(int[] id)
         {
@@ -236,7 +240,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
                 }
             }
         }
-
+        [Authorize]
         [HttpGet]
         public ActionResult EditSidebar()
         {
@@ -255,6 +259,7 @@ namespace BuyOnline_Assignment.Area.Admin.Controllers
             // Return view with model
             return View(model);
         }
+        [Authorize]
         [HttpPost]
         public ActionResult EditSidebar(SidebarVM model)
         {
