@@ -10,14 +10,8 @@
     @Html.ActionLink("Add new page", "AddPage")
 </p>
 
-@if (!Model.Any())
-{
-    <h1 class="text-center">There are no pages.</h1>
-}
-else
-{
     <table class="table sorting" id="pages">
-        <tr class="home">
+        <tr>
             <th>
                 Title
             </th>
@@ -54,7 +48,7 @@ else
         }
 
     </table>
-}
+
 
 @section Scripts {
     <script src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
