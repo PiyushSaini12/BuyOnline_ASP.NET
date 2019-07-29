@@ -14,7 +14,7 @@ namespace BuyOnline_Assignment
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            GlobalFilters.Filters.Add(new System.Web.Mvc.AuthorizeAttribute());
+  
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
